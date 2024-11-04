@@ -17,9 +17,6 @@ export default async function Home({
    const session = await auth();
    console.log(session?.id);
 
-   // const posts = await client.fetch(STARTUPS_QUERY);
-   // console.log(posts);
-
    return (
       <main className={"font-work-sans"}>
          <section className="pink_container">
