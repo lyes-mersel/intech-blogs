@@ -14,9 +14,6 @@ export default async function Home({
    const params = { search: query || null };
    const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
-   const session = await auth();
-   console.log(session?.id);
-
    return (
       <main className={"font-work-sans"}>
          <section className="pink_container">
