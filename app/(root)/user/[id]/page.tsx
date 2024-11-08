@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { StartupCardSkeleton } from "@/components/StartupCard";
+import { StartupCardSkeleton } from "@/components/BlogCard";
 import UserStartups from "@/components/UserBlogs";
 import { client } from "@/sanity/lib/client";
 import { AUTHOR_BY_ID_QUERY } from "@/sanity/lib/queries";

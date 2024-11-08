@@ -11,7 +11,7 @@ import markdownit from "markdown-it";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
-import StartupCard, { StartupCardType } from "@/components/StartupCard";
+import StartupCard, { BlogCardType } from "@/components/BlogCard";
 
 const md = markdownit();
 
@@ -87,7 +87,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
           <div className="max-w-4xl mx-auto">
             <p className="text-30-semibold">Top Viewed Blogs</p>
             <ul className="mt-7 card_grid-sm">
-              {editorPosts.map((post: StartupCardType, i: number) => (
+              {editorPosts.map((post: BlogCardType, i: number) => (
                 <StartupCard key={i} post={post} />
               ))}
             </ul>

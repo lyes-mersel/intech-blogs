@@ -740,7 +740,7 @@
                 "optional": true
               }
             },
-            "dereferencesTo": "startup",
+            "dereferencesTo": "blog",
             "rest": {
               "type": "object",
               "attributes": {
@@ -759,7 +759,7 @@
     }
   },
   {
-    "name": "startup",
+    "name": "blog",
     "type": "document",
     "attributes": {
       "_id": {
@@ -772,7 +772,7 @@
         "type": "objectAttribute",
         "value": {
           "type": "string",
-          "value": "startup"
+          "value": "blog"
         }
       },
       "_createdAt": {
@@ -866,7 +866,7 @@
         },
         "optional": true
       },
-      "pitch": {
+      "content": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
