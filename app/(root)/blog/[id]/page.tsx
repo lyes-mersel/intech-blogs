@@ -69,14 +69,14 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </div>
 
           <div>
-            <h3 className="text-30-bold">Pitch Details</h3>
+            <h3 className="text-30-bold">Explore the Topic</h3>
             {parsedContent ? (
               <article
                 className="prose max-w-4xl font-work-sans break-all"
                 dangerouslySetInnerHTML={{ __html: parsedContent }}
               />
             ) : (
-              <p className="no-result">No details provided</p>
+              <p className="no-result">No content provided</p>
             )}
           </div>
         </div>
@@ -85,7 +85,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         {editorPosts?.length > 0 && (
           <div className="max-w-4xl mx-auto">
-            <p className="text-30-semibold">Editor Picks</p>
+            <p className="text-30-semibold">Top Viewed Blogs</p>
             <ul className="mt-7 card_grid-sm">
               {editorPosts.map((post: StartupCardType, i: number) => (
                 <StartupCard key={i} post={post} />

@@ -34,10 +34,10 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 
       <div className="flex-between mt-5 gap-5">
         <div className="flex-1">
-          <Link href={`/users/${author?._id}`}>
+          <Link href={`/user/${author?._id}`}>
             <span className="text-16-medium line-clamp-1">{author?.name}</span>
           </Link>
-          <Link href={`/startup/${_id}`}>
+          <Link href={`/blog/${_id}`}>
             <h3 className="text-26-semibold line-clamp-1">{title}</h3>
           </Link>
         </div>
@@ -52,7 +52,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
         </Link>
       </div>
 
-      <Link href={`/startup/${_id}`}>
+      <Link href={`/blog/${_id}`}>
         <p className="startup-card_desc">{description}</p>
         <Image
           src={image || fallbackImage}
@@ -68,7 +68,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
           <span className="text-16-medium">{category}</span>
         </Link>
         <Button className="startup-card_btn" asChild>
-          <Link href={`/startup/${_id}`}>Details</Link>
+          <Link href={`/blog/${_id}`}>Details</Link>
         </Button>
       </div>
     </li>

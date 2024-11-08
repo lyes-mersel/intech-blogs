@@ -43,7 +43,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <div className="flex-1 flex flex-col gap-5 lg:-mt-5">
           <p className="text-30-bold">
-            {session?.id == id ? "Your" : "All"} Startups
+            {session?.id == id ? "Your" : "All"} Blogs
           </p>
 
           <ul className="card_grid-sm">
