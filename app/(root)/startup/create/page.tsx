@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import StartupFrom from "@/components/StartupFrom";
+import StartupFrom from "@/components/BlogFrom";
 import { redirect } from "next/navigation";
 import React from "react";
 

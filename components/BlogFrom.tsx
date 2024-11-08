@@ -12,7 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { createContent } from "@/lib/actions";
 import { useRouter } from "next/navigation";
 
-const StartupForm = () => {
+const BlogForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoaded, setIsLoaded] = useState(false);
   const [content, setContent] = useState("");
@@ -38,10 +38,10 @@ const StartupForm = () => {
       if (result.status == "SUCCESS") {
         toast({
           title: "Success",
-          description: "Your startup content has been created successfully",
+          description: "Your blog content has been created successfully",
         });
 
-        router.push(`/startup/${result._id}`);
+        router.push(`/blog/${result._id}`);
       }
 
       return result;
@@ -185,4 +185,4 @@ const StartupForm = () => {
   );
 };
 
-export default StartupForm;
+export default BlogForm;
