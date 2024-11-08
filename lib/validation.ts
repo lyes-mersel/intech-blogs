@@ -22,5 +22,5 @@ export const formSchema = z.object({
         return false;
       }
     }, "URL must be a valid image"),
-  pitch: z.string().min(10, "Pitch should be at least 10 characters"),
+  content: z.string().min(10, "The content should be at least 10 characters"),
 });

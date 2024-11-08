@@ -9,33 +9,36 @@ import { Send } from "lucide-react";
 import { formSchema } from "@/lib/validation";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { createPitch } from "@/lib/actions";
+import { createContent } from "@/lib/actions";
 import { useRouter } from "next/navigation";
 
 const StartupForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoaded, setIsLoaded] = useState(false);
-  const [pitch, setPitch] = useState("");
+  const [content, setContent] = useState("");
   const { toast } = useToast();
   const router = useRouter();
 
-  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+  const handleFormSubmit = async (
+    prevState: { error: string; status: string },
+    formData: FormData
+  ) => {
     try {
       const formValues = {
         title: formData.get("title") as string,
         description: formData.get("description") as string,
         category: formData.get("category") as string,
         link: formData.get("link") as string,
-        pitch,
+        content,
       };
 
       await formSchema.parseAsync(formValues);
 
-      const result = await createPitch(prevState, formData, pitch);
+      const result = await createContent(prevState, formData, content);
       if (result.status == "SUCCESS") {
         toast({
           title: "Success",
-          description: "Your startup pitch has been created successfully",
+          description: "Your startup content has been created successfully",
         });
 
         router.push(`/startup/${result._id}`);
@@ -69,6 +72,7 @@ const StartupForm = () => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [state, formAction, isPending] = useActionState(handleFormSubmit, {
     error: "",
     status: "INITIAL",
@@ -145,15 +149,15 @@ const StartupForm = () => {
       </div>
 
       <div data-color-mode="light">
-        <label htmlFor="pitch" className="startup-form_label">
+        <label htmlFor="content" className="startup-form_label">
           Content
         </label>
 
         {isLoaded && (
           <MDEditor
-            value={pitch}
-            onChange={(value) => setPitch(value as string)}
-            id="pitch"
+            value={content}
+            onChange={(value) => setContent(value as string)}
+            id="content"
             preview="edit"
             height={300}
             style={{ borderRadius: 20, overflow: "hidden" }}
@@ -166,7 +170,7 @@ const StartupForm = () => {
           />
         )}
 
-        {errors.pitch && <p className="startup-form_error">{errors.pitch}</p>}
+        {errors.content && <p className="startup-form_error">{errors.content}</p>}
       </div>
 
       <Button

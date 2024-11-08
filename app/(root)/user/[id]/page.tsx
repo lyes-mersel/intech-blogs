@@ -1,6 +1,6 @@
 import { auth } from "@/auth";
 import { StartupCardSkeleton } from "@/components/StartupCard";
-import UserStartups from "@/components/UserStartups";
+import UserStartups from "@/components/UserBlogs";
 import { client } from "@/sanity/lib/client";
 import { AUTHOR_BY_ID_QUERY } from "@/sanity/lib/queries";
 import Image from "next/image";

@@ -1,12 +1,9 @@
 import { client } from "@/sanity/lib/client";
-import { STARTUPS_BY_AUTHOR_QUERY } from "@/sanity/lib/queries";
+import { BLOGS_BY_AUTHOR_QUERY } from "@/sanity/lib/queries";
 import StartupCard, { StartupCardType } from "./StartupCard";
-import { cn } from "@/lib/utils";
 
-const UserStartups = async ({ id }: { id: string }) => {
-  const startups = await client.fetch(STARTUPS_BY_AUTHOR_QUERY, { id });
-
-  console.log(cn("skeleton", 1));
+const UserBlogs = async ({ id }: { id: string }) => {
+  const startups = await client.fetch(BLOGS_BY_AUTHOR_QUERY, { id });
 
   return (
     <>
@@ -21,4 +18,4 @@ const UserStartups = async ({ id }: { id: string }) => {
   );
 };
 
-export default UserStartups;
+export default UserBlogs;
