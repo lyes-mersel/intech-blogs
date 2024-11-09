@@ -1,6 +1,6 @@
 import { auth } from "@/auth";
-import { StartupCardSkeleton } from "@/components/BlogCard";
-import UserStartups from "@/components/UserBlogs";
+import { BlogCardSkeleton } from "@/components/BlogCard";
+import UserBlogs from "@/components/UserBlogs";
 import { client } from "@/sanity/lib/client";
 import { AUTHOR_BY_ID_QUERY } from "@/sanity/lib/queries";
 import Image from "next/image";
@@ -47,8 +47,8 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </p>
 
           <ul className="card_grid-sm">
-            <Suspense fallback={<StartupCardSkeleton />}>
-              <UserStartups id={id} />
+            <Suspense fallback={<BlogCardSkeleton />}>
+              <UserBlogs id={id} />
             </Suspense>
           </ul>
         </div>

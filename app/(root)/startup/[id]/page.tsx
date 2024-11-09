@@ -1,9 +1,6 @@
 import { formatDate } from "@/lib/utils";
 import { client } from "@/sanity/lib/client";
-import {
-  PLAYLIST_BY_SLUG_QUERY,
-  BLOG_BY_ID_QUERY,
-} from "@/sanity/lib/queries";
+import { PLAYLIST_BY_SLUG_QUERY, BLOG_BY_ID_QUERY } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +8,7 @@ import markdownit from "markdown-it";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
-import StartupCard, { BlogCardType } from "@/components/BlogCard";
+import BlogCard, { BlogCardType } from "@/components/BlogCard";
 
 const md = markdownit();
 
@@ -20,10 +17,10 @@ export const experimental_ppr = true;
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
 
-  const [post, { select: editorPosts }] = await Promise.all([
+  const [post, { select: topViewedBlogs }] = await Promise.all([
     client.fetch(BLOG_BY_ID_QUERY, { id }),
     client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-      slug: "editor-picks",
+      slug: "top-viewed-blogs",
     }),
   ]);
   if (!post) return notFound();
@@ -39,10 +36,13 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
       </section>
 
       <section className="section_container">
-        <img
-          src={post.image || null}
+        <Image
+          src={post?.image}
           alt="Thumbnail"
           className="w-full h-auto rounded-xl"
+          width={1000}
+          height={600}
+          layout="responsive"
         />
 
         <div className="space-y-5 mt-10 max-w-5xl mx-auto">
@@ -83,12 +83,12 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <hr className="divider" />
 
-        {editorPosts?.length > 0 && (
+        {topViewedBlogs?.length > 0 && (
           <div className="max-w-4xl mx-auto">
             <p className="text-30-semibold">Top Viewed Blogs</p>
             <ul className="mt-7 card_grid-sm">
-              {editorPosts.map((post: BlogCardType, i: number) => (
-                <StartupCard key={i} post={post} />
+              {topViewedBlogs.map((post: BlogCardType, i: number) => (
+                <BlogCard key={i} post={post} />
               ))}
             </ul>
           </div>

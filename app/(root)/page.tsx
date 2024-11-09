@@ -1,6 +1,6 @@
 // import { client } from "@/sanity/lib/client";
 import SearchForm from "../../components/SearchForm";
-import StartupCard, { BlogCardType } from "@/components/BlogCard";
+import BlogCard, { BlogCardType } from "@/components/BlogCard";
 import { BLOGS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 
@@ -35,7 +35,7 @@ export default async function Home({
         <ul className="mt-7 card_grid">
           {posts.length > 0 ? (
             posts.map((post: BlogCardType) => (
-              <StartupCard key={post._id} post={post} />
+              <BlogCard key={post._id} post={post} />
             ))
           ) : (
             <p>No blogs found</p>
