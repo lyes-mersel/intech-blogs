@@ -36,6 +36,7 @@ export const createContent = async (
         _type: "reference",
         _ref: session?.id,
       },
+      views: 0,
       content,
     };
     const result = await writeClient.create({ _type: "blog", ...blog });

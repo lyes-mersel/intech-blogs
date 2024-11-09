@@ -93,3 +93,17 @@ export const PLAYLIST_BY_SLUG_QUERY = defineQuery(`
       content
       }
    }`);
+
+export const TOP_VIEWED_BLOGS_QUERY = defineQuery(`
+   *[_type == "blog" && defined(slug.current)] | order(views desc) [0...4] {
+      _id,
+      title,
+      slug,
+      _createdAt,
+      author -> {_id, name, image, bio}, 
+      views,
+      description,
+      category,
+      image,
+      content,
+   }`);

@@ -8,7 +8,7 @@ export const formSchema = z.object({
     .max(500, "Description is too long. Max 500 characters at most"),
   category: z
     .string()
-    .min(3, "Category should be at least 3 characters")
+    .min(2, "Category should be at least 2 characters")
     .max(20, "Category is too long. Max 20 characters at most"),
   link: z
     .string()

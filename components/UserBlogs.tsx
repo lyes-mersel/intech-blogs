@@ -8,8 +8,8 @@ const UserBlogs = async ({ id }: { id: string }) => {
   return (
     <>
       {blogs.length > 0 ? (
-        blogs.map((startup: BlogCardType) => (
-          <BlogCard key={startup._id} post={startup} />
+        blogs.map((blog: BlogCardType) => (
+          <BlogCard key={blog._id} post={blog} />
         ))
       ) : (
         <p className="no-result">No posts yet</p>
