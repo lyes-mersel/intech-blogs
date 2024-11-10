@@ -27,19 +27,15 @@ export const metadata: Metadata = {
     title: "inTech Blogs",
     description:
       "Join the tech community to share and discover the latest in AI, cybersecurity, software development, and more.",
-    images: [
-      { url: "https://yourwebsite.com/og-image.jpg" }, // Replace with the actual URL to your Open Graph image
-    ],
-    url: "https://yourwebsite.com", // Replace with the actual URL of your site
+    images: [{ url: "https://yourwebsite.com/og-image.jpg" }],
+    url: "https://yourwebsite.com",
   },
   twitter: {
-    card: "summary_large_image", // The type of Twitter card to display (can be "summary", "summary_large_image", etc.)
+    card: "summary_large_image",
     title: "inTech Blogs",
     description:
       "Join the tech community to share and discover the latest in AI, cybersecurity, software development, and more.",
-    images: [
-      { url: "https://yourwebsite.com/og-image.jpg" }, // Twitter card image
-    ],
+    images: [{ url: "https://yourwebsite.com/og-image.jpg" }],
   },
 };
 
