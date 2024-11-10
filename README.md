@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <a href="https://github.com/lyes-mersel/intech-blogs">
+    <img src="./public/intech-blogs-logo.png" alt="Logo" width="300" height="50">
+  </a><br />
+</div>
+
+# inTech Blogs
+
+**inTech Blogs** is a modern blogging platform where tech enthusiasts can share insights and engage with the community on topics like AI, cybersecurity, software development, and more. Built with the latest features of Next.js 15 and React 19, inTech Blogs is optimized for a seamless user experience.
+
+---
+
+## Table of Contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Developer Information](#developer-information)
+
+---
+
+## Features
+
+- **Latest Next.js 15 Architecture**: Leveraging Next.js’s App Folder Structure, client and server components, dynamic routes, and advanced API routes.
+- **Versatile Data Fetching**: Optimized data fetching with SSR, SSG, ISR, and PPR for efficient performance.
+- **SEO & Metadata**: Integrated Next.js 15 SEO capabilities for better reach.
+- **GitHub Authentication**: Secure GitHub sign-in with NextAuth for quick access.
+- **CMS Powered by Sanity**: Dynamic content management with Sanity CMS.
+- **Error Tracking**: Comprehensive error handling with Sentry.
+- **Tailwind CSS Styling**: Responsive, modern design.
+- **TypeScript**: Enhances code reliability and maintainability.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Git**: Version control
+- **Node.js**: Runtime environment
+- **Environment Variables**: Listed below
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/lyes-mersel/intech-blogs.git
+    cd intech-blogs
+    ```
 
-## Learn More
+2. **Install Dependencies**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set Up Environment Variables**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    In the root directory, create a `.env.local` file and add:
 
-## Deploy on Vercel
+    ```plaintext
+    # Authentication
+    AUTH_SECRET=your_auth_secret
+    AUTH_GITHUB_ID=your_github_oauth_app_id
+    AUTH_GITHUB_SECRET=your_github_oauth_app_secret
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    # Sanity CMS
+    NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+    NEXT_PUBLIC_SANITY_DATASET=your_sanity_dataset
+    NEXT_PUBLIC_SANITY_API_VERSION="vX"
+    SANITY_WRITE_TOKEN=your_sanity_write_token
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    # Sentry
+    SENTRY_AUTH_TOKEN=your_sentry_auth_token
+    ```
+
+4. **Run the Development Server**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) to view in the browser.
+
+---
+
+## Usage
+
+- **Explore Content**: Discover topics in AI, Cybersecurity, Software Engineering, and more.
+- **Create Blogs**: Sign in with GitHub to publish and share your insights with the tech community.
+
+---
+
+## Screenshots
+
+| Root Page | Blog Page |
+| -------| ------- |
+| ![](./screenshots/screenshot1.png) | ![](./screenshots/screenshot2.png) |
+
+| Create Blog | Author Profile |
+| -------| ------- |
+| ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
+
+---
+
+## Contributing
+
+We welcome contributions! Here’s how to contribute:
+
+1. **Fork the Project**
+2. **Create a New Branch** (`git checkout -b feature/YourFeature`)
+3. **Commit Your Changes** (`git commit -m 'Add Your Feature'`)
+4. **Push to the Branch** (`git push origin feature/YourFeature`)
+5. **Open a Pull Request**
+
+---
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## Developer Information
+
+- **Portfolio** - [My Portfolio Link](https://lyes-mersel.netlify.app)
+- **GitHub** - [@lyes-mersel](https://github.com/lyes-mersel)
+- **LinkedIn** - [@lyes-mersel](https://www.linkedin.com/in/lyes-mersel)
+
+---
+
+**inTech Blogs** connects tech minds worldwide—join us, share your insights, and be part of the conversation shaping the future of technology!
