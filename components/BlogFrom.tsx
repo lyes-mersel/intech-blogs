@@ -83,73 +83,73 @@ const BlogForm = () => {
   }, [setIsLoaded]);
 
   return (
-    <form action={formAction} className="startup-form">
+    <form action={formAction} className="blog-form">
       <div>
-        <label htmlFor="title" className="startup-form_label">
+        <label htmlFor="title" className="blog-form_label">
           Title
         </label>
         <Input
           id="title"
           name="title"
-          className="startup-form_input"
+          className="blog-form_input"
           required
           placeholder="Blog Title"
         />
 
-        {errors.title && <p className="startup-form_error">{errors.title}</p>}
+        {errors.title && <p className="blog-form_error">{errors.title}</p>}
       </div>
 
       <div>
-        <label htmlFor="description" className="startup-form_label">
+        <label htmlFor="description" className="blog-form_label">
           Description
         </label>
         <Textarea
           id="description"
           name="description"
-          className="startup-form_textarea"
+          className="blog-form_textarea"
           required
           placeholder="Blog Description"
         />
 
         {errors.description && (
-          <p className="startup-form_error">{errors.description}</p>
+          <p className="blog-form_error">{errors.description}</p>
         )}
       </div>
 
       <div>
-        <label htmlFor="category" className="startup-form_label">
+        <label htmlFor="category" className="blog-form_label">
           Category
         </label>
         <Input
           id="category"
           name="category"
-          className="startup-form_input"
+          className="blog-form_input"
           required
           placeholder="Blog Category (AI, Cybersecurity, Dev...)"
         />
 
         {errors.category && (
-          <p className="startup-form_error">{errors.category}</p>
+          <p className="blog-form_error">{errors.category}</p>
         )}
       </div>
 
       <div>
-        <label htmlFor="link" className="startup-form_label">
+        <label htmlFor="link" className="blog-form_label">
           Image URL
         </label>
         <Input
           id="link"
           name="link"
-          className="startup-form_input"
+          className="blog-form_input"
           required
           placeholder="Blog Image URL"
         />
 
-        {errors.link && <p className="startup-form_error">{errors.link}</p>}
+        {errors.link && <p className="blog-form_error">{errors.link}</p>}
       </div>
 
       <div data-color-mode="light">
-        <label htmlFor="content" className="startup-form_label">
+        <label htmlFor="content" className="blog-form_label">
           Content
         </label>
 
@@ -170,12 +170,12 @@ const BlogForm = () => {
           />
         )}
 
-        {errors.content && <p className="startup-form_error">{errors.content}</p>}
+        {errors.content && <p className="blog-form_error">{errors.content}</p>}
       </div>
 
       <Button
         type="submit"
-        className="startup-form_btn text-white"
+        className="blog-form_btn text-white"
         disabled={isPending}
       >
         {isPending ? "Submitting..." : "Submit Your Blog"}

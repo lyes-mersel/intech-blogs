@@ -23,9 +23,9 @@ const BlogCard = ({ post }: { post: BlogCardType }) => {
   const fallbackImage = "https://placehold.co/100.png";
 
   return (
-    <li className="startup-card group">
+    <li className="blog-card group">
       <div className="flex-between">
-        <span className="startup-card_date">{formatDate(_createdAt)}</span>
+        <span className="blog-card_date">{formatDate(_createdAt)}</span>
         <div className="flex gap-1.5">
           <EyeIcon className="ttext-6 text-primary" />
           <span className="text-16-medium">{views}</span>
@@ -53,13 +53,13 @@ const BlogCard = ({ post }: { post: BlogCardType }) => {
       </div>
 
       <Link href={`/blog/${_id}`}>
-        <p className="startup-card_desc">{description}</p>
+        <p className="blog-card_desc">{description}</p>
         <Image
           src={image || fallbackImage}
           alt="placeholder"
           height={200}
           width={300}
-          className="startup-card_img"
+          className="blog-card_img"
         />
       </Link>
 
@@ -67,7 +67,7 @@ const BlogCard = ({ post }: { post: BlogCardType }) => {
         <Link href={`/?query=${category?.toLowerCase()}`}>
           <span className="text-16-medium">{category}</span>
         </Link>
-        <Button className="startup-card_btn" asChild>
+        <Button className="blog-card_btn" asChild>
           <Link href={`/blog/${_id}`}>Details</Link>
         </Button>
       </div>
@@ -79,7 +79,7 @@ export const BlogCardSkeleton = () => (
   <>
     {[0, 1, 2, 3, 4, 5].map((index: number) => (
       <li key={cn("skeleton", index)}>
-        <Skeleton className="startup-card_skeleton" />
+        <Skeleton className="blog-card_skeleton" />
       </li>
     ))}
   </>
