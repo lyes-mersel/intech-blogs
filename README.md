@@ -98,13 +98,9 @@
 
 ## Screenshots
 
-| Root Page | Blog Page |
-| -------| ------- |
-| ![](./screenshots/screenshot1.png) | ![](./screenshots/screenshot2.png) |
-
-| Create Blog | Author Profile |
-| -------| ------- |
-| ![](./screenshots/screenshot3.png) | ![](./screenshots/screenshot4.png) |
+| 1 | 2 | 3 | 3 |  4 | 
+| -------| ------- | -------| ------- | -------|
+| ![](./assets/screenshot1.jpeg) | ![](./assets/screenshot2.jpeg) | ![](./assets/screenshot3.1.jpeg) | ![](./assets/screenshot3.2.jpeg) | ![](./assets/screenshot4.jpeg) |
 
 ---
 
