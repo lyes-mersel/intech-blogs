@@ -219,3 +219,8 @@
 .w-md-editor-toolbar {
   padding: 10px !important;
 }
+
+/* Sentry: Report a bug button */
+#sentry-feedback {
+  --inset: auto auto 0 0;
+}
