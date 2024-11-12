@@ -166,7 +166,7 @@
   }
 
   .blog-form_input {
-    @apply bg-white-100 border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
+    @apply bg-white border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
   }
 
   .blog-form_textarea {
