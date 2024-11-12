@@ -9,9 +9,7 @@ const NavBar = async () => {
   const session = await auth();
 
   return (
-    <header
-      className={"text-black px-5 py-2 bg-white shadow-sm font-work-sans"}
-    >
+    <header className={"text-black px-5 py-2 shadow-sm font-work-sans"}>
       <nav className={"flex justify-between items-center"}>
         <Link href={"/"}>
           <Image

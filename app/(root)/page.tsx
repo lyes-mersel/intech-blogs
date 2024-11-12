@@ -1,4 +1,3 @@
-// import { client } from "@/sanity/lib/client";
 import SearchForm from "../../components/SearchForm";
 import BlogCard, { BlogCardType } from "@/components/BlogCard";
 import { BLOGS_QUERY } from "@/sanity/lib/queries";
@@ -14,7 +13,7 @@ export default async function Home({
   const { data: posts } = await sanityFetch({ query: BLOGS_QUERY, params });
 
   return (
-    <main className={"font-work-sans"}>
+    <>
       <section className="pink_container">
         <span className="tag">Tech News, Insights, and Innovation</span>
         <h1 className={"heading"}>
@@ -44,6 +43,6 @@ export default async function Home({
       </section>
 
       <SanityLive />
-    </main>
+    </>
   );
 }
