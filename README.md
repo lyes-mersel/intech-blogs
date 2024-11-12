@@ -98,7 +98,7 @@
 
 ## Screenshots
 
-| 1 | 2 | 3 | 3 |  4 | 
+|  |  |  |  |  | 
 | -------| ------- | -------| ------- | -------|
 | ![](./assets/screenshot1.jpeg) | ![](./assets/screenshot2.jpeg) | ![](./assets/screenshot3.1.jpeg) | ![](./assets/screenshot3.2.jpeg) | ![](./assets/screenshot4.jpeg) |
 
